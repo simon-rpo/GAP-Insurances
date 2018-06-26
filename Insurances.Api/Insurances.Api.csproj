@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\PolicyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -108,13 +109,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Insurances.Dto\Insurances.Dto.csproj">
+      <Project>{4062A5B9-C2C1-4E24-8F98-1D0865AE8E12}</Project>
+      <Name>Insurances.Dto</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Insurances.Middleware\Insurances.Middleware.csproj">
       <Project>{8CEAD54F-1CE8-4584-95EF-D1294E4F6E93}</Project>
       <Name>Insurances.Middleware</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Insurances.Rules\Insurances.Rules.csproj">
+      <Project>{492F1458-7BC8-41EE-AB90-EC13CAF2FE44}</Project>
+      <Name>Insurances.Rules</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

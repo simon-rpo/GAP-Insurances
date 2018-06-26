@@ -17,7 +17,7 @@ namespace Insurances.Api
                 methods: "*");
             config.EnableCors(cors);
             // Middleware Config...
-            // AutoMapperConfig.Configure();
+            AutoMapperConfig.Configure();
             config = AutoFactConfig.Configure(config, Assembly.GetExecutingAssembly());
             // Rutas de API web
             config.MapHttpAttributeRoutes();

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Insurances.Model
 {
-    [Table("ConvertingTypes")]
+    [Table("CoveringTypes")]
     public class CoveringType
     {
         [Key]

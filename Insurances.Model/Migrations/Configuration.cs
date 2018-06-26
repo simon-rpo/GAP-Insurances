@@ -14,7 +14,6 @@
         protected override void Seed(InsurancesContext context)
         {
             // Pending...
-         );
         }
     }
 }
