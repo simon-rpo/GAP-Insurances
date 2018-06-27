@@ -21,7 +21,7 @@ namespace Insurances.Dal
         {
             this.context = context;
         }
-        #endregion Constructor
+        #endregion
 
         #region Public Methods
         public async Task<bool> SavePolicy(PolicyDto dto)

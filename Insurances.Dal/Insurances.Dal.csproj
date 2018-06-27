@@ -54,6 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\ClientDal.cs" />
+    <Compile Include="Class\CoveringTypeDal.cs" />
+    <Compile Include="Interface\ICoveringTypeDal.cs" />
+    <Compile Include="Interface\IClientDal.cs" />
     <Compile Include="Interface\IPolicyDal.cs" />
     <Compile Include="Class\PolicyDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

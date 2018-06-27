@@ -40,6 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\ClientRules.cs" />
+    <Compile Include="Class\CoveringTypeRules.cs" />
+    <Compile Include="Interface\ICoveringTypeRules.cs" />
+    <Compile Include="Interface\IClientRules.cs" />
     <Compile Include="Interface\IPolicyRules.cs" />
     <Compile Include="Class\PolicyRules.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -33,11 +33,15 @@ namespace Insurances.Middleware
         private static void DataAccessLayer(ref ContainerBuilder builder)
         {
             builder.RegisterType<PolicyDal>().As<IPolicyDal>();
+            builder.RegisterType<ClientDal>().As<IClientDal>();
+            builder.RegisterType<CoveringTypeDal>().As<ICoveringTypeDal>();
         }
 
         private static void Rules(ref ContainerBuilder builder)
         {
             builder.RegisterType<PolicyRules>().As<IPolicyRules>();
+            builder.RegisterType<ClientRules>().As<IClientRules>();
+            builder.RegisterType<CoveringTypeRules>().As<ICoveringTypeRules>();
         }
 
         private static void External(ref ContainerBuilder builder)
