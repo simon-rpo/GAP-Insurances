@@ -51,11 +51,9 @@
     <Compile Include="Entities\Client.cs" />
     <Compile Include="Entities\CoveringType.cs" />
     <Compile Include="Entities\Policy.cs" />
-    <Compile Include="Generic\RiskEnum.cs" />
-    <Compile Include="Generic\StatusEnum.cs" />
-    <Compile Include="Migrations\201806261351470_Initial.cs" />
-    <Compile Include="Migrations\201806261351470_Initial.Designer.cs">
-      <DependentUpon>201806261351470_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201806271548021_Initial.cs" />
+    <Compile Include="Migrations\201806271548021_Initial.Designer.cs">
+      <DependentUpon>201806271548021_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,9 +63,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806261351470_Initial.resx">
-      <DependentUpon>201806261351470_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806271548021_Initial.resx">
+      <DependentUpon>201806271548021_Initial.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Insurances.Dto\Insurances.Dto.csproj">
+      <Project>{4062A5B9-C2C1-4E24-8F98-1D0865AE8E12}</Project>
+      <Name>Insurances.Dto</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

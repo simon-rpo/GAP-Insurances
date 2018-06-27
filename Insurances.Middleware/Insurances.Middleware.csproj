@@ -71,6 +71,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Insurances.Dal\Insurances.Dal.csproj">
+      <Project>{4CA4322C-2F8D-446F-BABB-E39B8CE7B6B6}</Project>
+      <Name>Insurances.Dal</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Insurances.Dto\Insurances.Dto.csproj">
       <Project>{4062A5B9-C2C1-4E24-8F98-1D0865AE8E12}</Project>
       <Name>Insurances.Dto</Name>
@@ -78,6 +82,10 @@
     <ProjectReference Include="..\Insurances.Model\Insurances.Model.csproj">
       <Project>{17EE6BC5-6FDE-4BE0-AC1F-351D39F8DDD1}</Project>
       <Name>Insurances.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Insurances.Rules\Insurances.Rules.csproj">
+      <Project>{492F1458-7BC8-41EE-AB90-EC13CAF2FE44}</Project>
+      <Name>Insurances.Rules</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

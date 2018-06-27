@@ -20,6 +20,7 @@ namespace Insurances.Model
         [MaxLength(150)]
         public string Identification { get; set; }
 
+        [InverseProperty("Client")]
         public virtual ICollection<Policy> Policy { get; set; }
     }
 }

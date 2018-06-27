@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Insurances.Dto;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -38,6 +39,7 @@ namespace Insurances.Model
         [Column(Order = 8)]
         public decimal Price { get; set; }
 
+        [Required]
         [Column(Order = 9)]
         public int ClientId { get; set; }
         [ForeignKey("ClientId")]

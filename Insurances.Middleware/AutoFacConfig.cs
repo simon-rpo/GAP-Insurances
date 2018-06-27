@@ -1,5 +1,8 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
+using Insurances.Dal;
+using Insurances.Model;
+using Insurances.Rules;
 using System.Reflection;
 using System.Web.Http;
 
@@ -16,30 +19,30 @@ namespace Insurances.Middleware
 
             Rules(ref builder);
             DataAccessLayer(ref builder);
+            External(ref builder);
 
             Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(builder.Build());
 
             return Configuration;
         }
 
-        #region Private Methods
         /// <summary>
-        /// Registry Data access layer for injection(autofac)
+        /// Dependency injection for Inversion of Control
         /// </summary>
-        /// <param name="builder"></param>
+        #region Private Methods
         private static void DataAccessLayer(ref ContainerBuilder builder)
         {
-            //builder.RegisterType<EmployeeDal>().As<IEmployeeDal>();
+            builder.RegisterType<PolicyDal>().As<IPolicyDal>();
         }
 
-        /// <summary>
-        /// registry Rules(Business Rules layer) for injection
-        /// </summary>
-        /// <param name="builder"></param>
         private static void Rules(ref ContainerBuilder builder)
         {
-            //builder.RegisterType<EmployeeRules>().As<IEmployeeRules>();
-            //builder.RegisterType<PayrollRules>().As<IPayrollRules>();
+            builder.RegisterType<PolicyRules>().As<IPolicyRules>();
+        }
+
+        private static void External(ref ContainerBuilder builder)
+        {
+            builder.RegisterType<InsurancesContext>().As<InsurancesContext>();
         }
 
         #endregion

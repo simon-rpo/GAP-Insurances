@@ -1,4 +1,4 @@
-﻿namespace Insurances.Model
+﻿namespace Insurances.Dto
 {
     public enum RiskEnum
     {

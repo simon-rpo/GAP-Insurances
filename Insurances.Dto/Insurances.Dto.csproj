@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientDto.cs" />
+    <Compile Include="Common\MessageEnum.cs" />
+    <Compile Include="Common\RiskEnum.cs" />
+    <Compile Include="Common\StatusEnum.cs" />
     <Compile Include="MessageDto.cs" />
     <Compile Include="PolicyDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -39,9 +39,72 @@ namespace Insurances.Api.Controllers
             }
             catch (Exception ex)
             {
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new MessageDto
+                {
+                    Code = (int)MessageEnum.Error,
+                    Message = ex.Message
+                });
             }
         }
+
+        [Route("api/Policy/UpdatePolicy")]
+        [HttpPost]
+        public async Task<HttpResponseMessage> UpdatePolicy(PolicyDto Policy)
+        {
+            try
+            {
+                MessageDto lData = await PolicyRules.UpdatePolicy(Policy);
+                return Request.CreateResponse(HttpStatusCode.OK, new { ModelData = lData, Message = string.Empty });
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new MessageDto
+                {
+                    Code = (int)MessageEnum.Error,
+                    Message = ex.Message
+                });
+            }
+        }
+
+        [Route("api/Policy/CancelPolicy")]
+        [HttpPost]
+        public async Task<HttpResponseMessage> CancelPolicy(PolicyDto Policy)
+        {
+            try
+            {
+                MessageDto lData = await PolicyRules.CancelPolicy(Policy);
+                return Request.CreateResponse(HttpStatusCode.OK, new { ModelData = lData, Message = string.Empty });
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new MessageDto
+                {
+                    Code = (int)MessageEnum.Error,
+                    Message = ex.Message
+                });
+            }
+        }
+
+
+        [Route("api/Policy/GetPoliciesByClient")]
+        [HttpPost]
+        public async Task<HttpResponseMessage> GetPoliciesByClient(int ClientId)
+        {
+            try
+            {
+                List<PolicyDto> lData = await PolicyRules.GetPoliciesByClientId(ClientId);
+                return Request.CreateResponse(HttpStatusCode.OK, new { ModelData = lData, Message = string.Empty });
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new MessageDto
+                {
+                    Code = (int)MessageEnum.Error,
+                    Message = ex.Message
+                });
+            }
+        }
+
         #endregion
 
     }

@@ -11,11 +11,11 @@ namespace Insurances.Model.Migrations
                 "dbo.Clients",
                 c => new
                     {
-                        id = c.Int(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         Name = c.String(maxLength: 150),
                         Identification = c.String(maxLength: 150),
                     })
-                .PrimaryKey(t => t.id);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Policies",
@@ -34,17 +34,17 @@ namespace Insurances.Model.Migrations
                         Status = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.CoveringTypes", t => t.CoveringTypeId, cascadeDelete: true)
                 .ForeignKey("dbo.Clients", t => t.ClientId, cascadeDelete: true)
-                .ForeignKey("dbo.ConvertingTypes", t => t.CoveringTypeId, cascadeDelete: true)
                 .Index(t => t.CoveringTypeId)
                 .Index(t => t.ClientId);
             
             CreateTable(
-                "dbo.ConvertingTypes",
+                "dbo.CoveringTypes",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Nombre = c.String(maxLength: 150),
+                        Name = c.String(maxLength: 150),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -52,11 +52,11 @@ namespace Insurances.Model.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Policies", "CoveringTypeId", "dbo.ConvertingTypes");
             DropForeignKey("dbo.Policies", "ClientId", "dbo.Clients");
+            DropForeignKey("dbo.Policies", "CoveringTypeId", "dbo.CoveringTypes");
             DropIndex("dbo.Policies", new[] { "ClientId" });
             DropIndex("dbo.Policies", new[] { "CoveringTypeId" });
-            DropTable("dbo.ConvertingTypes");
+            DropTable("dbo.CoveringTypes");
             DropTable("dbo.Policies");
             DropTable("dbo.Clients");
         }
