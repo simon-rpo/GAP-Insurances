@@ -19,6 +19,28 @@ namespace Insurances.Dto
         public int ClientId { get; set; }
         public ClientDto Client { get; set; }
         public int Risk { get; set; }
+        public string RiskName
+        {
+            get { return GetRiskName(Risk); }
+            set { value = GetRiskName(Risk); }
+        }
         public int Status { get; set; }
+
+        private string GetRiskName(int Risk)
+        {
+            switch (Risk)
+            {
+                case 1:
+                    return RiskEnum.Lower.ToString();
+                case 2:
+                    return RiskEnum.Medium.ToString();
+                case 3:
+                    return RiskEnum.MidHigher.ToString();
+                case 4:
+                    return RiskEnum.Higher.ToString();
+                default:
+                    return string.Empty;
+            }
+        }
     }
 }

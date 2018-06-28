@@ -21,7 +21,7 @@ var Request = {
       callback: function (e) { //callback handler on DOM changes  
         //log the events in the panel
         if (parseInt($('#page-top').css('padding-right')) > 0) {
-          $('#page-top').css('padding-right', '')
+          $('#page-top').css('padding-right', '');
         }
       }
     });
@@ -29,7 +29,7 @@ var Request = {
     $('#btnSearch').click(function (e) {
       e.preventDefault();
       Request.LoadRequest();
-    })
+    });
   },
 
   LoadClients: function () {
@@ -117,7 +117,7 @@ var Request = {
         { data: "PolicyStart" },
         { data: "Period" },
         { data: "Price" },
-        { data: "Risk" },
+        { data: "RiskName" },
         {
           "mRender": function (data, type, full, meta) {
             return "<div >" +
@@ -178,4 +178,4 @@ var Request = {
       Request.LoadRequest();
     });
   },
-}
+};
