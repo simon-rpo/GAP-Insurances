@@ -14,7 +14,7 @@ namespace Insurances.Api
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en-US"); //Default Lenguaje
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("es-CO"); //Default Lenguaje
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

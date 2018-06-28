@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewBag.Title = "Insurances";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Theme CSS -->
+<link href="~/Content/vendor/bootstrap/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/vendor/bootstrap/css/fixedColumns.bootstrap.min.css" rel="stylesheet" />
+
+<!--Scripts-->
+<script src="~/Content/vendor/bootstrap/js/jquery.dataTables.js"></script>
+<script src="~/Content/vendor/bootstrap/js/dataTables.bootstrap.js"></script>
+<script src="~/Content/vendor/bootstrap/js/dataTables.fixedColumns.js"></script>
+
+
+<script src="~/Content/scripts/Insurance/Insurance.js"></script>
+<!--Scripts-->
+<!--Buttons-->
+<div style="position: relative;padding: 1rem;margin: 1rem -15px 0;border: solid #f7f7f9;border-width: .2rem 0 0;">
+    <div class="Title">
+        <h3 class="text-center trn">Policy Creation</h3>
+    </div>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <div class="form-group col-md-10" style="margin-bottom: 1px;">
+                    <label for="inputEmail4">Client</label>
+                </div>
+                <select id="selectClients" class="selectpicker" data-live-search="true"></select>
+            </div>
+            <div class="form-group col-md-8">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group col-md-12">
+                <label for="inputAddress">Name</label>
+                <input class="form-control form-control-lg" id="inputName" placeholder="Client">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group col-md-12">
+                <label for="inputAddress">Description</label>
+                <input class="form-control form-control-lg" id="inputDescription" placeholder="Description">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <div class="form-group col-md-10" style="margin-bottom: 1px;">
+                    <label for="inputEmail4">Covering Type</label>
+                </div>
+                <select id="selectCovTypes" class="selectpicker" data-live-search="true"></select>
+            </div>
+            <div class="form-group col-md-8">
+                <label for="inputPassword4">Covering Percentage (0% - 100%)</label>
+                <input class="form-control form-control-lg" id="inputCoveringPercentage" placeholder="Covering Percentage">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group col-md-12">
+                <label for="inputAddress">Coverage Starting</label>
+                <div class='input-group date' id="dateCoverageStart">
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group col-md-12">
+                <label for="inputAddress">Coverage Period</label>
+                <input type="text" class="form-control" id="inputPeriod" placeholder="Coverage Period">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group col-md-12">
+                <label for="inputAddress">Price</label>
+                <input type="text" class="form-control" id="inputPrice" placeholder="Price">
+            </div>
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label for="exampleFormControlInput1">Risk Type</label>
+                <div class="select-color form-group">
+                    <select id="seleRiskType" class="form-control">
+                        <option value="1">Lower</option>
+                        <option value="2">Medium</option>
+                        <option value="3">Med-High</option>
+                        <option value="4">Higher</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group col-md-4"></div>
+            <div class="form-group col-md-2"></div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group col-md-12">
+                <button type="submit" id="btnSave" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+@*</div>*@
+<br />
