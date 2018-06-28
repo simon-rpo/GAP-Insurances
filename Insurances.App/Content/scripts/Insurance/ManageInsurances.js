@@ -164,7 +164,7 @@ var Request = {
           message: dataPolicy.ModelData.Message,
           target: '_blank'
         },
-          { type: 'Success' });
+          { type: 'success' });
 
       } else {
         $.notify({
