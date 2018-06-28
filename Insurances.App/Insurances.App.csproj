@@ -117,6 +117,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\scripts\Insurance\Insurance.js" />
     <Content Include="Content\scripts\Insurance\ManageInsurances.js" />
+    <Content Include="Content\scripts\Login\Login.js" />
     <Content Include="Content\scripts\Utils\Generic\Generic.js" />
     <Content Include="Content\scripts\Utils\Plugins\attrchange.js" />
     <Content Include="Content\scripts\Utils\Plugins\bootstrap-datetimepicker.js" />
@@ -155,9 +156,12 @@
     <Content Include="Views\Insurance\Insurance.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\SessionAuthorizeAttribute.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InsuranceController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ManageInsurancesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -201,6 +205,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\ManageInsurances\ManageInsurances.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -212,6 +218,12 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\img\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Insurances.Dto\Insurances.Dto.csproj">
+      <Project>{4062A5B9-C2C1-4E24-8F98-1D0865AE8E12}</Project>
+      <Name>Insurances.Dto</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

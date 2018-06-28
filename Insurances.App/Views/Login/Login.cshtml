@@ -1,0 +1,108 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>INSURANCES - Login</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="~/Content/css/styles.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="~/Content/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Scripts -->
+    <script src="~/Content/vendor/jquery/jquery-3.1.1.min.js"></script>
+    <script src="~/Content/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/scripts/Utils/Plugins/waitingfor.js"></script>
+    <script src="~/Content/scripts/Utils/Generic/Generic.js"></script>
+    <script src="~/Content/scripts/Utils/Urls/Urls.js"></script>
+    <script src="~/Content/scripts/Login/Login.js"></script>
+
+</head>
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div id="topBar" class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="row page-scroll" style="display: -webkit-flex; display: flex;">
+                <div id="divLogo" class="col-md-12 col-sm-11" style="-webkit-flex: initial; flex: initial;">
+                </div>
+                <div style="-webkit-flex: 1; flex: 1; width:80%; min-width: 100px;">
+                    <a class="navbar-brand trn nav-home">INSURANCES</a>
+                </div>
+            </div>
+        </div>
+        <!--.container-fluid -->
+    </nav>
+    <!--.Navigation -->
+    <!--Body container-->
+    <section class="login-grid">
+        <div class="container container-login">
+            <!--Form-->
+            <div class="col-sm-3"></div>
+            <div class="wrapper col-sm-6">
+                <form action="" method="post" name="Login_Form" class="form-signin">
+                    <h3 class="form-signin-heading text-center trn">Login</h3>
+                    <hr class="spartan">
+                    <div class="input-group input-login">
+                        <span class="input-group-addon" id="sizing-addon1">
+                            <i class="fa fa-user"></i>
+                        </span>
+                        <input type="text" id="userNameInput" class="form-control trn" name="Username" placeholder="UserName" required="" autofocus="" />
+                    </div>
+                    <div class="input-group input-login">
+                        <span class="input-group-addon" id="sizing-addon1">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                        <input type="password" id="passwordInput" class="form-control trn" name="Password" placeholder="Password" required="" />
+                    </div>
+                    <div id="loginBtn">
+                        <input id="btnLogin" class="btn btn-lg btn-primary btn-block trn" name="Submit" type="button" value="Login" />
+                    </div>
+                    <div>
+                        <p class="text-center" id="LoginMessage"></p>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-3"></div>
+            <!--.Form-->
+        </div>
+    </section>
+    <!--.Body container-->
+    <!--Footer-->
+    <footer class="footer text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; <span class="year">2018</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--.Footer-->
+    <div class="GlobalMessage Disable" id="GolbalMessage">
+        <div class="row">
+            <div class="col-sm-12">
+                <label id="lblMessageTitle"></label>
+            </div>
+            <br />
+            <div class="col-sm-12">
+                <label id="lblMessageContainer"></label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

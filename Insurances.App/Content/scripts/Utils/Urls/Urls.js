@@ -18,3 +18,10 @@ var UrlsPolicy = {
     GetPolById: UrlApi + "Policy/GetPoliciesByClient?ClientId={0}",
     CancelPolicy: UrlApi + "Policy/CancelPolicy",
 };
+
+var UrlsAuthenticate = {
+    LoginUser: UrlApi + "Login/GetAuth",
+    Authenticate: PrePath + "Home/Authenticate?Data1={0}&Data2={1}",
+    ToHome: PrePath + "Home/Home",
+    LogOutUser: PrePath + "Login/LogOut",
+};

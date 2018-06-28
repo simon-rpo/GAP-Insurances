@@ -19,10 +19,6 @@
         }
     });
 
-    //Titles init
-    var translator = $('body').translate({ lang: "ES", t: dict });
-    translator.lang(Language.Culture); //Default Spanish
-
     //add Year
     var date = new Date();
     var year = date.getFullYear();

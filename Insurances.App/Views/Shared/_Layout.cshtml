@@ -34,7 +34,31 @@
     <script src="~/Content/scripts/Utils/Generic/Messages.js"></script>
     <script src="~/Content/scripts/Utils/Plugins/attrchange.js"></script>
 
+    <script type="text/javascript">
+        window.onload = function () {
+            btnLogout();
+        }
+        var btnLogout = function () {
+            //Log Out
+            $("#logOut").click(function () {
+                $.ajax({
+                    url: UrlsAuthenticate.LogOutUser,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    cache: false,
+                    async: false,
+                    success: function (data) {
+                        sessionStorage.removeItem("User");
+                        window.location.pathname = "../login/login";
+                    },
+                });
+            });
+        }
+    </script>
+
 </head>
+
+
 
 <body id="page-top" class="index">
 
@@ -45,7 +69,7 @@
             <div class="navbar-header page-scroll">
                 <div class="row page-scroll" style="display: -webkit-flex; display: flex;">
                     <div style="-webkit-flex: 1; flex: 1; width:80%; min-width: 100px;">
-                        <a class="navbar-brand trn nav-home" data-trn-key="INSURANCES" style="float: left; "></a>
+                        <a class="navbar-brand trn nav-home">INSURANCES</a>
                     </div>
                 </div>
             </div>
@@ -67,6 +91,9 @@
                     </li>
                     <li class="page-scroll active">
                         <a href="../ManageInsurances/ManageInsurances">Manage Insurances</a>
+                    </li>
+                    <li class="page-scroll active">
+                        <a href="../Login/Login" id="logOut" class="trn">Logout</a>
                     </li>
                 </ul>
             </div>

@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Insurances.App;
 using System.Web.Mvc;
 
-namespace Payroll.App.Controllers
+namespace Insurance.App.Controllers
 {
     public class ManageInsurancesController : Controller
     {
-        // GET: MAnageInsurances
+        [SessionAuthorizeAttribute]
         public ActionResult ManageInsurances()
         {
             return View();
