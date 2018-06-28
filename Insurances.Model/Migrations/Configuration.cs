@@ -6,7 +6,7 @@ namespace Insurances.Model.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Insurances.Model.InsurancesContext context)
@@ -22,6 +22,12 @@ namespace Insurances.Model.Migrations
                 new CoveringType() { Name = "Robo" },
                 new CoveringType() { Name = "Pérdida" }
                 );
+
+            context.Client.AddOrUpdate(x => x.Name,
+                new Client() { Name = "Simon Restrepo", Identification = "1254525645" },
+                new Client() { Name = "Tom Hanks", Identification = "4555478554" }
+                );
+
         }
     }
 }
