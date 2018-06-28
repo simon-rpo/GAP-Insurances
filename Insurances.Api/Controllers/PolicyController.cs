@@ -87,7 +87,7 @@ namespace Insurances.Api.Controllers
 
 
         [Route("api/Policy/GetPoliciesByClient")]
-        [HttpPost]
+        [HttpGet]
         public async Task<HttpResponseMessage> GetPoliciesByClient(int ClientId)
         {
             try

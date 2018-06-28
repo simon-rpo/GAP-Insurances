@@ -15,4 +15,6 @@ var UrlsCoveringTypes = {
 
 var UrlsPolicy = {
     Save: UrlApi + "Policy/SavePolicy",
+    GetPolById: UrlApi + "Policy/GetPoliciesByClient?ClientId={0}",
+    CancelPolicy: UrlApi + "Policy/CancelPolicy",
 };
